@@ -1,0 +1,15 @@
+<div class="login-container">
+  <div class="login-left">
+
+    <form class="form" (ngSubmit)="submit()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required />
+
+      <button class="btn-primary btn" type="submit">Entrar</button>
+    </form>
+  </div>
+  <div class="login-right">
+    <h2></h2>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.login-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.login-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+
+    background: var(--color-white);
+    color: var(--color-gray-dark);
+}
+
+
+.login-right {
+    width: 70%;
+    background-color: var(--color-primary-light);
+}
+
