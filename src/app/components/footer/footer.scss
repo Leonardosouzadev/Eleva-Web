@@ -1,0 +1,102 @@
+/* Estilos do Footer */
+.footer-eleva {
+    margin-top: auto;
+    /* Empurra o footer para o final da página */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 40px var(--padding-padrao);
+    /* Mais padding vertical */
+    border-top: 3px solid var(--cor-destaque);
+    /* Linha de destaque no topo */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem em telas menores */
+    justify-content: space-between;
+    gap: 30px;
+    /* Espaçamento entre as colunas */
+}
+
+/* Colunas (seções) do Footer */
+.footer-section {
+    flex: 1 1 200px;
+    /* Cresce, encolhe, e tem tamanho base de 200px */
+    min-width: 150px;
+    /* Garante que não fiquem muito estreitos */
+}
+
+.footer-section h3 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* Logo e Direitos Autorais */
+.footer-logo {
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    /* Linha sutil de separação */
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        /* Ocupa a largura total em telas menores */
+        text-align: center;
+    }
+
+    .footer-section ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

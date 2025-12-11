@@ -4,12 +4,12 @@ import { Navheader } from '../../components/navheader/navheader';
 import { Footer } from '../../components/footer/footer';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-profile',
   standalone: true,
   imports: [RouterModule, Navheader, Footer],
-  templateUrl: './home.html',
-  styleUrl: './home.scss',
+  templateUrl: './profile.html',
+  styleUrl: './profile.scss',
 })
-export class Home { 
-  
+export class Profile {
+
 }
