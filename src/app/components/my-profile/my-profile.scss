@@ -1,0 +1,54 @@
+/* --- Estilos da Seção Perfil --- */
+.profile-section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px var(--padding-padrao);
+    text-align: center; /* Centraliza todo o conteúdo interno */
+    background-color: #f8f8f8; /* Fundo cinza claro para destacar do body/footer */
+    color: #333;
+}
+
+.profile-card {
+    max-width: 400px;
+    margin: 0 auto; /* Centraliza o card na seção */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave e moderna */
+    padding: 30px;
+    border-top: 5px solid var(--cor-destaque); /* Destaque superior */
+}
+
+/* Foto de Perfil */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-bottom: 20px;
+    border: 4px solid #eee; /* Borda interna leve */
+    box-shadow: 0 0 0 5px var(--cor-destaque); /* Borda externa em cor de destaque */
+}
+
+/* Informações do Texto */
+.profile-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--cor-fundo); /* Nome em cor escura */
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    font-size: 1.1em;
+    color: var(--cor-destaque); /* Título/Cargo em cor de destaque */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.profile-bio {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    margin-top: 15px;
+}

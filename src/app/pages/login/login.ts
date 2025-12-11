@@ -18,7 +18,7 @@ export class Login {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-  submit() {
+  submitLogin() {
     this.auth.login(this.email, this.password).subscribe(() => {
       this.router.navigate(['/']);
     });
