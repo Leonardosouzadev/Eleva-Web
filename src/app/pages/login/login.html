@@ -1,15 +1,53 @@
 <div class="login-container">
   <div class="login-left">
+    <div class="form-wrapper">
 
-    <form class="form" (ngSubmit)="submitLogin()">
-      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
-
-      <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required />
-
-      <button class="btn-primary btn" type="submit">Entrar</button>
-    </form>
+      @switch (tela) {
+      @case ('login') {
+      <h2>Bem-vindo de volta!</h2>
+      <p>Por favor, insira seus dados para acessar sua conta.</p>
+      <app-loginform></app-loginform>
+      <p style="margin-top: 20px; font-size: 14px;">
+        Não tem uma conta?
+        <button class="switch-btn" (click)="screenRegister()">Crie uma agora</button>
+      </p>
+      }
+      @case ("register") {
+      <h2>Crie sua conta</h2>
+      <p>Junte-se a nós e comece sua jornada hoje mesmo.</p>
+      <app-registerform></app-registerform>
+      <p style="margin-top: 20px; font-size: 14px;">
+        Já possui conta?
+        <button class="switch-btn" (click)="screenLogin()">Fazer Login</button>
+      </p>
+      }
+      }
+    </div>
   </div>
+
   <div class="login-right">
-    <h2></h2>
+    <div class="carousel-container">
+      @for (img of images; track img; let i = $index) {
+      <div class="slide" [class.active]="i === currentImageIndex" [style.backgroundImage]="'url(' + img + ')'">
+      </div>
+      }
+    </div>
+
+    <div class="glass-card">
+      <div class="glass-content">
+        <h1>Eleva</h1>
+        <p>Compartilhe suas metas e conquistas com amigos e colegas.</p>
+        <p>
+          Inspire-se, organize-se e alcance mais com Eleva.<br>
+          Influencie positivamente sua produtividade e a de quem está ao seu redor.
+        </p>
+
+        <div class="indicators">
+          @for (img of images; track img; let i = $index) {
+          <span class="dot" [class.active]="i === currentImageIndex"></span>
+          }
+        </div>
+      </div>
+    </div>
   </div>
 </div>

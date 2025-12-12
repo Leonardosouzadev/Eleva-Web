@@ -1,0 +1,11 @@
+    <div class="login-left">
+
+        <form class="form" (ngSubmit)="submitLogin()">
+            <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+
+            <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required />
+
+            <button class="btn-primary btn" type="submit">Entrar</button>
+
+        </form>
+    </div>
