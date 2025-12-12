@@ -1,35 +1,22 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../../core/services/auth.service';
-import { ProfileService } from '../../core/services/profile.service';
+// src/app/components/my-profile/my-profile.ts
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-my-profile',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './my-profile.html',
-  styleUrl: './my-profile.scss',
+  styleUrl: './my-profile.scss'
 })
 export class MyProfile {
 
-  user: any;
-  userPerson: any = null;
+  profile: any;
+  private route = inject(ActivatedRoute);
 
-  constructor(
-    private auth: AuthService,
-    private profileService: ProfileService
-  ) {}
-
-  ngOnInit() {
-    this.user = this.auth.getUserData();
-
-    if (this.user?.sub) {
-      this.profileService.getById(this.user.sub).subscribe({
-        next: (result) => {
-          this.userPerson = result;
-          console.log("Profile recebido:", this.userPerson);
-        },
-        error: (err) => console.error("Erro ao carregar perfil:", err)
-      });
-    }
+  constructor() {
+    this.profile = this.route.snapshot.data['profile'];
+    console.log('Perfil carregado pelo resolver:', this.profile);
   }
 }

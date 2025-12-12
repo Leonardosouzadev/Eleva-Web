@@ -1,18 +1,40 @@
 <section class="profile-section">
-    <div class="profile-card">
+  <div class="profile-card">
 
-        <img 
-            [src]="userPerson.profileImage" 
-            alt="Foto de Perfil"
-            class="profile-photo"
-        >
-
-        <h2 class="profile-name">{{ userPerson.profileName }}</h2>
-
-        <p class="profile-title">Fundador & CEO | Eleva</p>
-
-        <p class="profile-bio">
-            {{ userPerson.profileBiography }}
-        </p>
+    <!-- Avatar centralizado -->
+    <div class="profile-avatar-container">
+      <img [src]="profile.profileImage" alt="Foto do perfil" class="profile-avatar">
     </div>
+
+    <!-- Nome e bio -->
+    <div class="profile-info">
+      <h2 class="profile-name">{{ profile.profileName }}</h2>
+      <p class="profile-bio">{{ profile.profileBiography }}</p>
+    </div>
+
+    <!-- Estatísticas -->
+    <div class="profile-stats">
+      <div class="stat">
+        <span class="stat-number">{{ profile.posts }}</span>
+        <span class="stat-label">Posts</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">{{ profile.followers }}</span>
+        <span class="stat-label">Seguidores</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">{{ profile.following }}</span>
+        <span class="stat-label">Seguindo</span>
+      </div>
+    </div>
+
+    <!-- Botões de ação do usuário -->
+    <div class="profile-actions">
+      <button class="btn btn-primary">Editar Perfil</button>
+      <button class="btn btn-secondary">Ver Detalhes</button>
+      <button class="btn btn-secondary">Alterar Foto</button>
+      <button class="btn btn-secondary">Configurações</button>
+    </div>
+
+  </div>
 </section>

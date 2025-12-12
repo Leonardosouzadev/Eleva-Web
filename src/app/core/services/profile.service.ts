@@ -9,7 +9,13 @@ export class ProfileService {
 
   constructor(private http: HttpClient) {}
 
-  getById(id: String){
-    return this.http.get(`${this.api}/${id}`);
-  }
+  getById(id: string): Observable<any> {
+  const token = localStorage.getItem('token');
+  return this.http.get(`${this.api}/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+}
+
 }
