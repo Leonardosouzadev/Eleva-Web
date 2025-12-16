@@ -14,25 +14,38 @@ body {
 }
 
 :root {
-  /* BRAND COLORS (Paleta principal) */
-  --color-primary: #4CAF50;
-  /* Verde Principal */
-  --color-primary-light: #8BC34A;
-  /* Verde Secundário */
+  /* SCSS HEX */
+  $honeydew: #e6fdecff;
+  $cayenne-red: #ef5e0fff;
+  $spring-green: #1afa7bff;
+  $blue: #1125ffff;
+  $tropical-mint: #63f5a5ff;
 
-  /* NEUTRALS */
-  --color-white: #FFFFFF;
-  /* Fundo primário */
-  --color-gray-light: #F5F5F5;
-  /* Fundo secundário */
-  --color-gray-dark: #212121;
-  /* Texto principal */
-  --color-gray-medium: #757575;
-  /* Texto secundário */
+  /* SCSS HSL */
+  $honeydew: hsla(136, 85%, 95%, 1);
+  $cayenne-red: hsla(21, 88%, 50%, 1);
+  $spring-green: hsla(146, 96%, 54%, 1);
+  $blue: hsla(235, 100%, 53%, 1);
+  $tropical-mint: hsla(147, 88%, 67%, 1);
 
-  /* SUPPORT / FEEDBACK */
-  --color-info: #2196F3;
-  /* Azul para links, ações e alertas */
+  /* SCSS RGB */
+  $honeydew: rgba(230, 253, 236, 1);
+  $cayenne-red: rgba(239, 94, 15, 1);
+  $spring-green: rgba(26, 250, 123, 1);
+  $blue: rgba(17, 37, 255, 1);
+  $tropical-mint: rgba(99, 245, 165, 1);
+
+  /* SCSS Gradient */
+  $gradient-top: linear-gradient(0deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-right: linear-gradient(90deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-bottom: linear-gradient(180deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-left: linear-gradient(270deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-top-right: linear-gradient(45deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-bottom-right: linear-gradient(135deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-top-left: linear-gradient(225deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-bottom-left: linear-gradient(315deg, #e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+  $gradient-radial: radial-gradient(#e6fdecff, #ef5e0fff, #1afa7bff, #1125ffff, #63f5a5ff);
+
 
   --shadow-default: 0 2px 8px rgba(0, 0, 0, 0.1);
   --border-radius: 8px;
@@ -44,7 +57,7 @@ body {
   font-family: var(--font-system);
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
-  color-scheme: light dark;
+  color-scheme: var($honeydew);
 }
 
 
@@ -229,7 +242,8 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--green-primary);
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25); /* verde suavizado */
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25);
+  /* verde suavizado */
   outline: none;
 }
 
@@ -245,7 +259,8 @@ textarea:disabled {
 
 /* Input com erro */
 .input-error {
-  border-color: #e53935 !important; /* Vermelho de erro */
+  border-color: #e53935 !important;
+  /* Vermelho de erro */
   box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.25) !important;
 }
 
